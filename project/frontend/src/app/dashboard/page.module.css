@@ -1,0 +1,260 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* -----------------------------
+   HERO METRIC & HEADER
+----------------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: #1a1c20; /* Solid dark charcoal */
+  border: 1px solid #424754; /* Sharp tactical border */
+  border-radius: 8px; /* Sharp corners */
+  padding: 2rem;
+}
+
+.kicker {
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  color: #8c909f;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.statusValue {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: #adc6ff; /* Primary Blue */
+  line-height: 1;
+}
+
+.statusLabel {
+  color: #e2e2e8;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.25rem 1.75rem;
+  background-color: #1a1c20;
+  border: 1px solid #424754;
+  border-radius: 8px; /* Sharp corners */
+  min-width: 220px;
+}
+
+.profileCard span {
+  font-family: 'JetBrains Mono', monospace;
+  color: #8c909f;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.profileCard strong {
+  color: #ffffff;
+  margin-top: 0.35rem;
+  font-size: 1.05rem;
+}
+
+/* -----------------------------
+   SECTION LAYOUTS
+----------------------------- */
+.sectionBox {
+  background-color: #111317; /* Deepest background */
+  border: 1px solid #424754;
+  border-radius: 8px; /* Sharp corners */
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sectionHeading {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #8c909f;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #424754;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.sectionHeadingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.sectionTitle {
+  color: #e2e2e8;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.sectionSubtitle {
+  color: #8c909f;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.viewAll {
+  font-family: 'JetBrains Mono', monospace;
+  color: #adc6ff;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.viewAll:hover {
+  opacity: 0.8;
+}
+
+/* -----------------------------
+   MASTERY PROGRESS BARS
+----------------------------- */
+.progressGrid {
+  display: grid;
+  gap: 1rem;
+}
+
+.progressItem {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.progressLabelRow {
+  display: flex;
+  justify-content: space-between;
+  color: #e2e2e8;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Target the percentage text specifically */
+.progressLabelRow span:last-child {
+  font-family: 'JetBrains Mono', monospace;
+  color: #adc6ff;
+}
+
+.progressBarContainer {
+  width: 100%;
+  height: 4px; /* Thin, tactical line */
+  background-color: #282a2e;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: #adc6ff;
+  border-radius: 2px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* -----------------------------
+   TOPIC GRID & CARDS
+----------------------------- */
+.topicsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.topicCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #1a1c20;
+  border: 1px solid #424754;
+  border-radius: 8px; /* Sharp corners */
+  padding: 1.5rem;
+  min-height: 120px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.topicCard:hover {
+  border-color: #adc6ff;
+  background-color: #1e2024;
+  transform: translateY(-2px);
+}
+
+.topicHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.topicHeader span:first-child {
+  color: #e2e2e8;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.topicCard:hover .topicHeader span:first-child {
+  color: #adc6ff;
+}
+
+.topicHeader span:last-child {
+  font-family: 'JetBrains Mono', monospace;
+  color: #8c909f;
+  font-size: 0.85rem;
+}
+
+/* -----------------------------
+   UTILITY STATES
+----------------------------- */
+.loading {
+  text-align: center;
+  color: #8c909f;
+  padding: 4rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+}
+
+.emptyState {
+  text-align: center;
+  color: #8c909f;
+  padding: 4rem 2rem;
+  background-color: #1a1c20;
+  border: 1px solid #424754;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .header,
+  .sectionBox {
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profileCard {
+    width: 100%;
+    align-items: flex-start;
+  }
+}

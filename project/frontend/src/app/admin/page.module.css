@@ -1,0 +1,20 @@
+.container { max-width: 800px; margin: 0 auto; padding: 2rem; }
+.header { border-bottom: 1px solid #424754; padding-bottom: 1.5rem; margin-bottom: 2rem; }
+.title { font-size: 2.5rem; font-weight: 700; color: #ffb4ab; margin: 0; }
+.subtitle { color: #8c909f; margin-top: 0.5rem; }
+
+.formSection { background-color: #1a1c20; border: 1px solid #424754; border-radius: 8px; padding: 2rem; }
+.form { display: flex; flex-direction: column; gap: 1.5rem; }
+
+.row { display: flex; gap: 1.5rem; }
+.row > * { flex: 1; }
+
+.inputGroup { display: flex; flex-direction: column; gap: 0.5rem; }
+.inputGroup label { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #8c909f; text-transform: uppercase; }
+.inputGroup input, .inputGroup select { background-color: #111317; border: 1px solid #424754; color: #e2e2e8; padding: 0.75rem; border-radius: 4px; font-family: inherit; }
+.inputGroup input:focus, .inputGroup select:focus { outline: none; border-color: #ffb4ab; }
+
+.submitBtn { background-color: rgba(255, 180, 171, 0.1); border: 1px solid #ffb4ab; color: #ffb4ab; padding: 1rem; border-radius: 4px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'JetBrains Mono', monospace; }
+.submitBtn:hover { background-color: #ffb4ab; color: #111317; }
+
+.statusMsg { text-align: center; color: #4edea3; font-family: monospace; margin-top: 1rem; }

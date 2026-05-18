@@ -1,0 +1,250 @@
+/* --- LAYOUT & CONTAINERS --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+/* On desktop, make the layout a 2-column grid for the bottom panels */
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .heroPanel, .trendsPanel {
+    grid-column: 1 / -1; /* Make top panels span full width */
+  }
+}
+
+.panel {
+  background-color: #1a1c20;
+  border: 1px solid #424754;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.panelHeader {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #8c909f;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px dashed #424754;
+  padding-bottom: 0.75rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+/* --- HERO SECTION --- */
+.heroPanel {
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .heroPanel {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.operatorInfo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar {
+  width: 72px;
+  height: 72px;
+  background-color: #111317;
+  border: 2px solid #4edea3;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #4edea3;
+  box-shadow: 0 0 15px rgba(78, 222, 163, 0.1);
+}
+
+.alias {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e2e2e8;
+  margin: 0 0 0.25rem 0;
+  line-height: 1;
+}
+
+.rank {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  color: #adc6ff;
+  background: rgba(173, 198, 255, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.statsGroup {
+  display: flex;
+  gap: 2rem;
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .statBox { align-items: flex-end; }
+}
+
+.statLabel {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #8c909f;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #e2e2e8;
+  line-height: 1;
+}
+
+.emerald {
+  color: #4edea3;
+}
+
+/* --- HEATMAP (GITHUB STYLE) --- */
+.heatmapContainer {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto; /* Allow scrolling on small mobile screens */
+  padding-bottom: 0.5rem;
+}
+
+.heatmapGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-width: 100%;
+}
+
+.heatCell {
+  width: 16px;
+  height: 16px;
+  background-color: #282a2e;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.02);
+  transition: transform 0.1s;
+}
+
+.heatCell:hover {
+  transform: scale(1.2);
+  border-color: #e2e2e8;
+}
+
+/* Terminal Green Heat Levels */
+.heatLevel1 { background-color: rgba(78, 222, 163, 0.25); border-color: rgba(78, 222, 163, 0.1); }
+.heatLevel2 { background-color: rgba(78, 222, 163, 0.50); border-color: rgba(78, 222, 163, 0.2); }
+.heatLevel3 { background-color: rgba(78, 222, 163, 0.75); border-color: rgba(78, 222, 163, 0.3); }
+.heatLevel4 { background-color: rgba(78, 222, 163, 1.00); border-color: rgba(78, 222, 163, 0.4); box-shadow: 0 0 8px rgba(78, 222, 163, 0.4); }
+
+/* --- BADGES / ACQUISITIONS --- */
+.badgeList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #111317;
+  border: 1px solid #424754;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.badgeIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #adc6ff;
+  color: #adc6ff;
+  background-color: rgba(173, 198, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.badgeInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.badgeInfo strong {
+  color: #e2e2e8;
+  font-size: 1.1rem;
+}
+
+.badgeInfo span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #8c909f;
+  text-transform: uppercase;
+}
+
+/* --- TRANSACTION LOG --- */
+.logList {
+  display: flex;
+  flex-direction: column;
+}
+
+.logRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid #282a2e;
+}
+
+.logRow:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.logLeft, .logRight {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logTag {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  background: #111317;
+  border: 1px solid #424754;
+  border-radius: 4px;
+  color: #8c909f;
+}
+
+.time {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: #8c909f;
+}

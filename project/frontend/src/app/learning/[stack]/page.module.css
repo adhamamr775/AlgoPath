@@ -1,0 +1,24 @@
+.container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+.loading { text-align: center; padding: 4rem; color: #8c909f; font-family: 'JetBrains Mono', monospace; }
+.backLink { display: inline-flex; align-items: center; gap: 0.5rem; color: #8c909f; text-decoration: none; font-size: 0.9rem; margin-bottom: 1.5rem; transition: color 0.2s; }
+.backLink:hover { color: #adc6ff; }
+
+.header { border-bottom: 1px solid #424754; padding-bottom: 1.5rem; margin-bottom: 2rem; }
+.title { font-size: 2.5rem; font-weight: 700; color: #e2e2e8; margin: 0; }
+.subtitle { color: #8c909f; margin-top: 0.5rem; }
+
+.resourceList { display: flex; flex-direction: column; gap: 1rem; }
+.emptyState { text-align: center; color: #8c909f; padding: 3rem; font-family: monospace; background: rgba(255, 255, 255, 0.02); border: 1px dashed #424754; border-radius: 8px; }
+
+.resourceCard { display: flex; align-items: center; gap: 1.5rem; background-color: #1a1c20; border: 1px solid #424754; border-radius: 8px; padding: 1.25rem 1.5rem; text-decoration: none; transition: all 0.2s ease; }
+.resourceCard:hover { border-color: #adc6ff; background-color: #1e2024; }
+
+.cardIcon { color: #adc6ff; display: flex; align-items: center; justify-content: center; }
+.cardIcon span { font-size: 28px; }
+
+.cardContent { flex-grow: 1; display: flex; flex-direction: column; gap: 0.25rem; }
+.resourceTitle { font-size: 1.15rem; font-weight: 600; color: #e2e2e8; margin: 0; }
+.platformBadge { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #8c909f; text-transform: uppercase; }
+
+.openIcon { color: #424754; transition: color 0.2s; }
+.resourceCard:hover .openIcon { color: #adc6ff; }

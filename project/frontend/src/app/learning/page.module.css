@@ -1,0 +1,18 @@
+.container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+.header { border-bottom: 1px solid #424754; padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+.title { font-size: 3rem; font-weight: 700; color: #e2e2e8; line-height: 1; margin: 0; }
+.subtitle { color: #8c909f; margin-top: 0.5rem; font-size: 1rem; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+
+.card { background-color: #1a1c20; border: 1px solid #424754; border-radius: 8px; padding: 1.5rem; display: flex; flex-direction: column; text-decoration: none; transition: all 0.2s ease; min-height: 180px; }
+.card:hover { border-color: #adc6ff; background-color: #1e2024; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); }
+
+.cardTop { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+.categoryBadge { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #adc6ff; background: rgba(173, 198, 255, 0.1); border: 1px solid rgba(173, 198, 255, 0.2); padding: 0.3rem 0.6rem; border-radius: 4px; text-transform: uppercase; }
+
+.cardIcon { color: #8c909f; transition: color 0.2s; }
+.card:hover .cardIcon { color: #adc6ff; }
+
+.techName { font-size: 1.5rem; font-weight: 600; color: #e2e2e8; margin: 0 0 0.5rem 0; }
+.description { color: #8c909f; font-size: 0.9rem; line-height: 1.5; margin: 0; }

@@ -1,0 +1,28 @@
+.container { max-width: 1400px; margin: 0 auto; padding: 2rem; }
+.loading, .error { text-align: center; padding: 4rem; color: #8c909f; font-family: 'JetBrains Mono', monospace; }
+.header { border-bottom: 1px solid #424754; padding-bottom: 1.5rem; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; }
+.title { font-size: 2.5rem; font-weight: 700; color: #e2e2e8; text-transform: capitalize; margin: 0; }
+.backLink { display: inline-flex; align-items: center; gap: 0.5rem; color: #8c909f; text-decoration: none; font-size: 0.9rem; margin-bottom: 1rem; transition: color 0.2s; }
+.backLink:hover { color: #adc6ff; }
+.splitLayout { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+@media (min-width: 1024px) { .splitLayout { grid-template-columns: 1fr 1fr; gap: 3rem; } }
+.column { display: flex; flex-direction: column; gap: 1rem; }
+.columnHeader { display: flex; align-items: center; gap: 0.75rem; padding-bottom: 1rem; border-bottom: 1px dashed #424754; margin-bottom: 0.5rem; }
+.columnIcon { color: #adc6ff; }
+.columnTitle { font-size: 1.25rem; font-weight: 600; color: #e2e2e8; margin: 0; }
+.card { display: flex; align-items: flex-start; gap: 1rem; background-color: #1a1c20; border: 1px solid #424754; border-radius: 8px; padding: 1.25rem; transition: all 0.2s ease; }
+.card:hover { border-color: #adc6ff; background-color: #1e2024; }
+.cardCompleted { background-color: rgba(78, 222, 163, 0.05); border-color: rgba(78, 222, 163, 0.3); }
+.checkboxContainer { display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; border: 2px solid #424754; border-radius: 6px; cursor: pointer; background: transparent; flex-shrink: 0; margin-top: 0.2rem; transition: all 0.2s; }
+.checkboxContainer:hover { border-color: #adc6ff; }
+.checkboxCompleted { background: #4edea3; border-color: #4edea3; color: #111317; }
+.checkIcon { font-size: 16px; font-weight: bold; }
+.cardContent { flex-grow: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+.cardTop { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+.resourceTitle { font-size: 1.1rem; font-weight: 600; color: #e2e2e8; text-decoration: none; transition: color 0.2s; }
+.resourceTitle:hover { color: #adc6ff; text-decoration: underline; }
+.titleCompleted { color: #8c909f; text-decoration: line-through; }
+.badgeGroup { display: flex; gap: 0.5rem; align-items: center; }
+.badge { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 4px; text-transform: uppercase; }
+.platformBadge { background: #111317; border: 1px solid #424754; color: #8c909f; }
+.difficultyBadge { border: 1px solid #ffb4ab; color: #ffb4ab; background: rgba(255, 180, 171, 0.1); }
